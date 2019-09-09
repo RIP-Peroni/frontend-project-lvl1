@@ -1,0 +1,2 @@
+publish:
+	--dry-run

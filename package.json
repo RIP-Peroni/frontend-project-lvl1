@@ -1,0 +1,32 @@
+{
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "name": "hexproject1",
+  "version": "1.0.0",
+  "description": "My Brain games!",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RIP-Peroni/frontend-project-lvl1.git"
+  },
+  "author": "Iurii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RIP-Peroni/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/RIP-Peroni/frontend-project-lvl1#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "brain-games"
+  ]
+}
