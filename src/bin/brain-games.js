@@ -1,3 +1,6 @@
 #!/usr/bin/env node
-import { ourFunction } from '..';
+import
+ourFunction
+  from '..';
+
 ourFunction();
