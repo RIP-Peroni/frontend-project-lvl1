@@ -1,8 +1,10 @@
 import readlineSync from 'readline-sync';
 
-const evenOrNot = () => {
+export const gameRules = () => {
   console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if the number is even, otherwise answer "no". \n'); // /n - perehod na novuu stroku
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+};
+export const gameLogic = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
   for (let i = 0; i < 3; i += 1) {
@@ -22,4 +24,3 @@ const evenOrNot = () => {
   }
   return console.log(`Congratulations, ${name}!`);
 };
-export default evenOrNot;
