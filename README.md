@@ -3,3 +3,4 @@
 [![Build Status](https://travis-ci.org/travis-ci/docs-travis-ci-com.svg?branch=master)](https://travis-ci.org/travis-ci/docs-travis-ci-com)
 [![asciicast_brain-even](https://asciinema.org/a/Ob6z1szSQckRtJ5iOVTIHMx5Q.png)](https://asciinema.org/a/Ob6z1szSQckRtJ5iOVTIHMx5Q)
 [![asciicast_brain-calc](https://asciinema.org/a/fMq9mn3TcNgZnJjjguZywnVAQ.png)](https://asciinema.org/a/fMq9mn3TcNgZnJjjguZywnVAQ)
+[![asciicast_brain-gcd](https://asciinema.org/a/b0UIxVYwEaekRsMoiii1P7coM.png)](https://asciinema.org/a/b0UIxVYwEaekRsMoiii1P7coM)
