@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import
 { gameRules, gameLogic }
-  from '../ind-brain-progression';
+  from '../games/ind-brain-progression';
 import engine from '../gameEngine';
 
 engine(gameRules, gameLogic);
