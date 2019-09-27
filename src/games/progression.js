@@ -3,6 +3,14 @@ import { getRandomNumber, getRandomNumberIncluding0 } from '../getRandomNumber';
 
 const ruleForGame = 'What number is missing in the progression?';
 
+const showNumbersWithoutCommas = (array) => {
+  let resultString = '';
+  for (let k = 0; k < 10; k += 1) {
+    resultString += `${array[k]} `;
+  }
+  return resultString;
+};
+
 const createLogicOfGameProgression = () => {
   const elementNumber = getRandomNumberIncluding0(10);
   const numbers = [];
@@ -20,13 +28,6 @@ const createLogicOfGameProgression = () => {
     correctAnswer = String(myArray[elementNumber]);
     myArray[elementNumber] = '..';
     return myArray;
-  };
-  const showNumbersWithoutCommas = (array) => {
-    let resultString = '';
-    for (let k = 0; k < 10; k += 1) {
-      resultString += `${array[k]} `;
-    }
-    return resultString;
   };
   const question = `${showNumbersWithoutCommas(hideElement(numbers))}`;
   return {
