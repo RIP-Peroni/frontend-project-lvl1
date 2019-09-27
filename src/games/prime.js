@@ -18,7 +18,7 @@ const isPrime = (number) => {
   return true;
 };
 
-const createLogicOfGame = () => {
+const createLogicOfGamePrime = () => {
   const question = getRandomNumber(100);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return {
@@ -28,5 +28,5 @@ const createLogicOfGame = () => {
 };
 
 export default () => {
-  launchGame(ruleForGame, createLogicOfGame);
+  launchGame(ruleForGame, createLogicOfGamePrime);
 };

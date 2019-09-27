@@ -3,7 +3,7 @@ import { getRandomNumber, getRandomNumberIncluding0 } from '../getRandomNumber';
 
 const ruleForGame = 'What number is missing in the progression?';
 
-const createLogicOfGame = () => {
+const createLogicOfGameProgression = () => {
   const elementNumber = getRandomNumberIncluding0(10);
   const numbers = [];
   const firstElement = getRandomNumber(100);
@@ -36,5 +36,5 @@ const createLogicOfGame = () => {
 };
 
 export default () => {
-  launchGame(ruleForGame, createLogicOfGame);
+  launchGame(ruleForGame, createLogicOfGameProgression);
 };

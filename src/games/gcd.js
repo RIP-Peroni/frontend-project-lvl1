@@ -16,7 +16,7 @@ const calculateGcd = (firstNumber, secondNumber) => {
   return num1 + num2;
 };
 
-const createLogicOfGame = () => {
+const createLogicOfGameGcd = () => {
   const firstNumber = getRandomNumber(100);
   const secondNumber = getRandomNumber(100);
   const question = `${firstNumber} ${secondNumber}`;
@@ -28,5 +28,5 @@ const createLogicOfGame = () => {
 };
 
 export default () => {
-  launchGame(ruleForGame, createLogicOfGame);
+  launchGame(ruleForGame, createLogicOfGameGcd);
 };

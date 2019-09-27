@@ -15,7 +15,7 @@ const getRandomMathSign = () => {
   }
 };
 
-const createLogicOfGame = () => {
+const createLogicOfGameCalc = () => {
   const firstNumber = getRandomNumber(100);
   const secondNumber = getRandomNumber(100);
   const mathSign = getRandomMathSign();
@@ -41,5 +41,5 @@ const createLogicOfGame = () => {
 };
 
 export default () => {
-  launchGame(ruleForGame, createLogicOfGame);
+  launchGame(ruleForGame, createLogicOfGameCalc);
 };
