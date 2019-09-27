@@ -1,5 +1,5 @@
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/fd22a06f874de085323a/maintainability)](https://codeclimate.com/github/RIP-Peroni/frontend-project-lvl1/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/fd22a06f874de085323a/test_coverage)](https://codeclimate.com/github/RIP-Peroni/frontend-project-lvl1/test_coverage)
 [![Build Status](https://travis-ci.org/RIP-Peroni/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/RIP-Peroni/frontend-project-lvl1)
 [![asciicast_brain-even](https://asciinema.org/a/fQigPnKZdpH54g9Jkl5Gwcp9V.png)](https://asciinema.org/a/fQigPnKZdpH54g9Jkl5Gwcp9V)
 [![asciicast_brain-calc](https://asciinema.org/a/FICqt6iJrdhgtArzefVdS7Swi.png)](https://asciinema.org/a/FICqt6iJrdhgtArzefVdS7Swi)

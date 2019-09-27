@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-import
-{ gameRules, gameLogic }
-  from '../games/ind-brain-gcd';
-import engine from '../gameEngine';
+import runBrainGcd from '../games/gcd';
 
-engine(gameRules, gameLogic);
+runBrainGcd();
