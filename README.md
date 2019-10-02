@@ -1,7 +1,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/fd22a06f874de085323a/maintainability)](https://codeclimate.com/github/RIP-Peroni/frontend-project-lvl1/maintainability)
 [![Build Status](https://travis-ci.org/RIP-Peroni/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/RIP-Peroni/frontend-project-lvl1)
 # frontend-project-lvl1
----
 В проекте представлена серия консольных игр под названием Brain-Games (Игры разума)
 ## Install
 Для установки зависимостей используйте `$npm install`
