@@ -9,15 +9,12 @@ plugins:
 # https://eslint.org/docs/user-guide/configuring#specifying-environments
 env:
   node: true
-  jest: true
 
 # https://github.com/babel/babel-eslint
 parser: babel-eslint
 
 extends:
   - 'airbnb-base'
-  - 'plugin:jest/recommended'
-  - 'plugin:lodash-fp/recommended'
 
 rules:
   no-console: 0

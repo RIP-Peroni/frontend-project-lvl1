@@ -1,7 +1,7 @@
 import launchGame from '../gameEngine';
-import { getRandomNumber } from '../getRandomNumber';
+import getRandomNumber from '../getRandomNumber';
 
-const ruleForGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -10,7 +10,10 @@ const isPrime = (number) => {
   if (number === 2) {
     return true;
   }
-  for (let j = number - 1; j > 1; j -= 1) {
+  if (number % 2 === 0 || number % 5 === 0) {
+    return false;
+  }
+  for (let j = 2; j < number; j += 1) {
     if (number % j === 0) {
       return false;
     }
@@ -18,8 +21,8 @@ const isPrime = (number) => {
   return true;
 };
 
-const createLogicOfGamePrime = () => {
-  const question = getRandomNumber(100);
+const getQuestionAndAnswer = () => {
+  const question = getRandomNumber(1, 100);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return {
     question,
@@ -28,5 +31,5 @@ const createLogicOfGamePrime = () => {
 };
 
 export default () => {
-  launchGame(ruleForGame, createLogicOfGamePrime);
+  launchGame(gameDescription, getQuestionAndAnswer);
 };

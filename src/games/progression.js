@@ -1,35 +1,25 @@
 import launchGame from '../gameEngine';
-import { getRandomNumber, getRandomNumberIncluding0 } from '../getRandomNumber';
+import getRandomNumber from '../getRandomNumber';
 
-const ruleForGame = 'What number is missing in the progression?';
+const gameDescription = 'What number is missing in the progression?';
 
-const showNumbersWithoutCommas = (array) => {
-  let resultString = '';
-  for (let k = 0; k < 10; k += 1) {
-    resultString += `${array[k]} `;
+const getProgression = (start, diff, elementsCount, concealedElement) => {
+  let progression = '';
+  for (let i = 0; i < elementsCount; i += 1) {
+    const isConcealed = i === concealedElement;
+    progression = isConcealed ? `${progression} ..` : `${progression} ${start + diff * i}`;
   }
-  return resultString;
+  return progression.trim();
 };
 
-const createLogicOfGameProgression = () => {
-  const elementNumber = getRandomNumberIncluding0(10);
-  const numbers = [];
-  const firstElement = getRandomNumber(100);
-  numbers[0] = firstElement;
-  const stepOfProgression = getRandomNumber(10);
-  let currentNumber = firstElement;
-  for (let j = 1; j < 10; j += 1) {
-    numbers[j] = Number(`${currentNumber + stepOfProgression}`);
-    currentNumber += +stepOfProgression;
-  }
-  let correctAnswer;
-  const hideElement = (array) => {
-    const myArray = array;
-    correctAnswer = String(myArray[elementNumber]);
-    myArray[elementNumber] = '..';
-    return myArray;
-  };
-  const question = `${showNumbersWithoutCommas(hideElement(numbers))}`;
+const elementsCount = 10;
+
+const getQuestionAndAnswer = () => {
+  const start = getRandomNumber(0, 100);
+  const diff = getRandomNumber(1, 10);
+  const concealedElement = getRandomNumber(0, elementsCount - 1);
+  const question = getProgression(start, diff, elementsCount, concealedElement);
+  const correctAnswer = String(start + diff * concealedElement);
   return {
     question,
     correctAnswer,
@@ -37,5 +27,5 @@ const createLogicOfGameProgression = () => {
 };
 
 export default () => {
-  launchGame(ruleForGame, createLogicOfGameProgression);
+  launchGame(gameDescription, getQuestionAndAnswer);
 };

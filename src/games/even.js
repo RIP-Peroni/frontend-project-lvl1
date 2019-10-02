@@ -1,12 +1,12 @@
 import launchGame from '../gameEngine';
-import { getRandomNumber } from '../getRandomNumber';
+import getRandomNumber from '../getRandomNumber';
 
-const ruleForGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const createLogicOfGameEven = () => {
-  const isEvenNumber = (number) => number % 2 === 0;
-  const question = getRandomNumber(100);
-  const correctAnswer = isEvenNumber(question) ? 'yes' : 'no';
+const getQuestionAndAnswer = () => {
+  const isEven = (number) => number % 2 === 0;
+  const question = getRandomNumber(1, 100);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
   return {
     question,
     correctAnswer,
@@ -14,5 +14,5 @@ const createLogicOfGameEven = () => {
 };
 
 export default () => {
-  launchGame(ruleForGame, createLogicOfGameEven);
+  launchGame(gameDescription, getQuestionAndAnswer);
 };

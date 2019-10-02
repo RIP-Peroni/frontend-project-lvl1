@@ -1,7 +1,7 @@
 import launchGame from '../gameEngine';
-import { getRandomNumber } from '../getRandomNumber';
+import getRandomNumber from '../getRandomNumber';
 
-const ruleForGame = 'Find the greatest common divisor of given numbers.';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const calculateGcd = (firstNumber, secondNumber) => {
   let num1 = firstNumber;
@@ -16,11 +16,11 @@ const calculateGcd = (firstNumber, secondNumber) => {
   return num1 + num2;
 };
 
-const createLogicOfGameGcd = () => {
-  const firstNumber = getRandomNumber(100);
-  const secondNumber = getRandomNumber(100);
-  const question = `${firstNumber} ${secondNumber}`;
-  const correctAnswer = String(calculateGcd(firstNumber, secondNumber));
+const getQuestionAndAnswer = () => {
+  const num1 = getRandomNumber(1, 100);
+  const num2 = getRandomNumber(1, 100);
+  const question = `${num1} ${num2}`;
+  const correctAnswer = String(calculateGcd(num1, num2));
   return {
     question,
     correctAnswer,
@@ -28,5 +28,5 @@ const createLogicOfGameGcd = () => {
 };
 
 export default () => {
-  launchGame(ruleForGame, createLogicOfGameGcd);
+  launchGame(gameDescription, getQuestionAndAnswer);
 };

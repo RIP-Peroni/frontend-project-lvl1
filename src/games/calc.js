@@ -1,38 +1,28 @@
 import launchGame from '../gameEngine';
-import { getRandomNumber, getRandomNumberIncluding0 } from '../getRandomNumber';
+import getRandomNumber from '../getRandomNumber';
 
-const ruleForGame = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
-const getRandomMathSign = () => {
-  const signNumber = getRandomNumberIncluding0(3);
-  switch (signNumber) {
-    case 0:
-      return '-';
-    case 1:
-      return '+';
-    default:
-      return '*';
-  }
-};
+const operator = '-+*';
 
-const createLogicOfGameCalc = () => {
-  const firstNumber = getRandomNumber(100);
-  const secondNumber = getRandomNumber(100);
-  const mathSign = getRandomMathSign();
-  const question = `${firstNumber} ${mathSign} ${secondNumber}`;
+const getQuestionAndAnswer = () => {
+  const num1 = getRandomNumber(1, 100);
+  const num2 = getRandomNumber(1, 100);
+  const mathSign = operator[getRandomNumber(0, operator.length - 1)];
+  const question = `${num1} ${mathSign} ${num2}`;
   let correctAnswer = '';
   switch (mathSign) {
     case '-':
-      correctAnswer = String(firstNumber - secondNumber);
+      correctAnswer = String(num1 - num2);
       break;
     case '+':
-      correctAnswer = String(firstNumber + secondNumber);
+      correctAnswer = String(num1 + num2);
       break;
     case '*':
-      correctAnswer = String(firstNumber * secondNumber);
+      correctAnswer = String(num1 * num2);
       break;
     default:
-      correctAnswer = 'Something bad has happened... Do not panic!';
+      return false;
   }
   return {
     question,
@@ -41,5 +31,5 @@ const createLogicOfGameCalc = () => {
 };
 
 export default () => {
-  launchGame(ruleForGame, createLogicOfGameCalc);
+  launchGame(gameDescription, getQuestionAndAnswer);
 };
