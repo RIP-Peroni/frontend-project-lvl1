@@ -1,8 +1,6 @@
 ---
 
 plugins:
-  # https://github.com/jest-community/eslint-plugin-jest
-  - jest
   # https://github.com/babel/eslint-plugin-babel
   - babel
 

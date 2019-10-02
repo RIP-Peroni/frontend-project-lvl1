@@ -10,9 +10,6 @@ const isPrime = (number) => {
   if (number === 2) {
     return true;
   }
-  if (number % 2 === 0 || number % 5 === 0) {
-    return false;
-  }
   for (let j = 2; j < number; j += 1) {
     if (number % j === 0) {
       return false;
