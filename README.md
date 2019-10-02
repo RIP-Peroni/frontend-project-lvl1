@@ -1,12 +1,12 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/fd22a06f874de085323a/maintainability)](https://codeclimate.com/github/RIP-Peroni/frontend-project-lvl1/maintainability)
 [![Build Status](https://travis-ci.org/RIP-Peroni/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/RIP-Peroni/frontend-project-lvl1)
 # frontend-project-lvl1
-В проекте представлена серия консольных игр под названием Brain-Games (Игры разума)
+В проекте представлена серия консольных игр под названием Brain-Games.
 ## Install
 Для установки зависимостей используйте `$npm install`
 Для установки пакета используйте `$npm link`
 ## brain-even
- Игроку показывается случайное число. Нужно ответить **yes**, если число чётное, **no** — если нечётное:
+ Игроку показывается случайное число. Нужно ответить **yes**, если число чётное, **no** — если нечётное.
 [![asciicast_brain-even](https://asciinema.org/a/fQigPnKZdpH54g9Jkl5Gwcp9V.png)](https://asciinema.org/a/fQigPnKZdpH54g9Jkl5Gwcp9V)
 ## brain-calc
 Игроку показывается **случайное математическое выражение**. Нужно его вычислить и дать правильный ответ.
