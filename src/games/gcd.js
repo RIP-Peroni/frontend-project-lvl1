@@ -3,9 +3,9 @@ import getRandomNumber from '../getRandomNumber';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const calculateGcd = (firstNumber, secondNumber) => {
-  let num1 = firstNumber;
-  let num2 = secondNumber;
+const calculateGcd = (a, b) => {
+  let num1 = a;
+  let num2 = b;
   while (num1 !== 0 && num2 !== 0) {
     if (num1 > num2) {
       num1 %= num2;

@@ -3,12 +3,12 @@ import getRandomNumber from '../getRandomNumber';
 
 const gameDescription = 'What is the result of the expression?';
 
-const operator = '-+*';
+const operators = '-+*';
 
 const getQuestionAndAnswer = () => {
   const num1 = getRandomNumber(1, 100);
   const num2 = getRandomNumber(1, 100);
-  const mathSign = operator[getRandomNumber(0, operator.length - 1)];
+  const mathSign = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${num1} ${mathSign} ${num2}`;
   let correctAnswer = '';
   switch (mathSign) {
