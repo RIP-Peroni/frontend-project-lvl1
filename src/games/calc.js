@@ -10,7 +10,7 @@ const getQuestionAndAnswer = () => {
   const num2 = getRandomNumber(1, 100);
   const mathSign = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${num1} ${mathSign} ${num2}`;
-  let correctAnswer = '';
+  let correctAnswer;
   switch (mathSign) {
     case '-':
       correctAnswer = String(num1 - num2);
